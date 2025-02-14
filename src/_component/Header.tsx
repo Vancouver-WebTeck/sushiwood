@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import MaxWidthContent from "./MaxWidthContent";
 import Image from "next/image";
 import { motion } from "framer-motion";
+//TODO: scrollIntoView method or libraries like react-router-dom for navigation with smooth scroll behavior. react-scroll is bad 
 import { Link } from 'react-scroll';
 import {
   Contact,
@@ -17,6 +18,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePopupStore } from "@/stores/Popup";
+import Weather from "@/components/ui/currentTemperature";
 
 const Header = () => {
   const [displayMenu, setDisplayMenu] = useState(true);
@@ -140,10 +142,10 @@ const Header = () => {
                 <h3 className="text-4xl pl-20 ">Roku</h3>
                 <p className="border-b-2 pl-20 pb-4">Authentic Omakase</p>
                 <p className="border-b-2 pl-20 pb-4">{formattedDate}</p>
-                <p className="pl-20 flex gap-2">
+                <span className="pl-20 flex gap-2">
                   <Sun />
-                  24deg
-                </p>
+                  <Weather/>
+                </span>
               </div>
             </div>
           </div>
