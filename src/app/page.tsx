@@ -4,8 +4,6 @@ import Popup from "@/_component/Popup";
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, MapPin } from "lucide-react";
 import Image from "next/image";
-import { useRef } from "react";
-import Header from "@/_component/Header"; 
 
 export default function Home() {
   return (
