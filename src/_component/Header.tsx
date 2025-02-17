@@ -142,10 +142,10 @@ const Header = () => {
                 <h3 className="text-4xl pl-20 ">Roku</h3>
                 <p className="border-b-2 pl-20 pb-4">Authentic Omakase</p>
                 <p className="border-b-2 pl-20 pb-4">{formattedDate}</p>
-                <p className="pl-20 flex gap-2">
+                <span className="pl-20 flex gap-2">
                   <Sun />
                   <Weather/>
-                </p>
+                </span>
               </div>
             </div>
           </div>

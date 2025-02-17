@@ -1,26 +1,65 @@
 // src/components/LocationSelector.tsx - section for homepage to select location for weather data and menu options
-
+'use client';
 import React from 'react';
-import { useLocation } from "../contexts/LocationContext";
+import { useLocation } from '../contexts/LocationContext';
+import MaxWidthContent from '@/_component/MaxWidthContent';
+import Image from 'next/image';
 
-//TODO: fix this stupid shit... useLocation() is not a function WTF. saying that routing is the problem but my routing seems to be fine??? commented out for now becuase its breaking the whole site 
+
 export default function LocationSelector() {
-	// const { selectedLocation, setSelectedLocation } = useLocation();
-	const locations = ['Fernie, BC', 'Nelson, BC', 'Castlegar, BC'];
+	const { selectedLocation, setSelectedLocation } = useLocation();
+	const locations = [
+		{
+			apiAddr: 'Fernie, BC',
+			name: 'Sushiwood - Fernie',
+			address: 'A-1221 7th Ave, Fernie, BC, Canada V0B 1M0',
+			image: '/Sushiwood/sushiwood-nelson.webp',
+		},
+		{
+			apiAddr: 'Nelson, BC',
+			name: 'Sushiwood - Nelson',
+			address: '702 Vernon St, Nelson, BC V1L 4G2',
+			image: '/Sushiwood/sushiwood-nelson.webp',
+		},
+		{
+			apiAddr: 'Castlegar, BC',
+			name: 'Sushiwood - Castegar',
+			address: 'Columbia Ave, castlegar, BC V1n 1a9',
+			image: '/Sushiwood/sushiwood-castlegar.webp',
+		},
+	];
 
 	return (
-		<div className="flex space-x-4">
-			<select
-				className="p-2 border border-gray-200 rounded"
-				// value={selectedLocation}
-				// onChange={(e) => setSelectedLocation(e.target.value)}
-			>
-				{locations.map((loc) => (
-					<option key={loc} value={loc}>
-						{loc}
-					</option>
-				))}
-			</select>
-		</div>
+		<MaxWidthContent>
+			<h1 className='text-2xl font-bold'>Select a location</h1>
+			<div className="flex flex-wrap gap-4">
+        {locations.map((loc) => (
+          <button
+            key={loc.apiAddr}
+            onClick={() => setSelectedLocation(loc.apiAddr)} // Update global state
+            className={`relative rounded overflow-hidden shadow-md transition-transform duration-200 ${
+              selectedLocation === loc.apiAddr ? 'border-2 border-yellow-500 scale-105' : ''
+            }`}
+          >
+            {/* Image */}
+            <Image
+              src={loc.image}
+              alt={loc.name}
+							width={192}
+							height={192}
+              className="w-48 h-48 object-cover"
+            />
+            {/* Overlay with location details */}
+            <div
+              className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-2 text-center"
+              style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}
+            >
+              <p className="font-bold">{loc.name}</p>
+              <p className="text-xs">{loc.address}</p>
+            </div>
+          </button>
+        ))}
+      </div>
+		</MaxWidthContent>
 	);
 }
