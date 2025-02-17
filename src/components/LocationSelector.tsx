@@ -30,9 +30,9 @@ export default function LocationSelector() {
 	];
 
 	return (
-		<MaxWidthContent>
-			<h1 className='text-2xl font-bold'>Select a location</h1>
-			<div className="flex flex-wrap gap-4">
+		<>
+			{/* <h1 className='text-2xl font-bold'>Select a location</h1> */}
+			<div className="flex flex-wrap gap-4 justify-center">
         {locations.map((loc) => (
           <button
             key={loc.apiAddr}
@@ -45,9 +45,9 @@ export default function LocationSelector() {
             <Image
               src={loc.image}
               alt={loc.name}
-							width={192}
+							width={256}
 							height={192}
-              className="w-48 h-48 object-cover"
+              className="w-64 h-48 object-cover"
             />
             {/* Overlay with location details */}
             <div
@@ -60,6 +60,6 @@ export default function LocationSelector() {
           </button>
         ))}
       </div>
-		</MaxWidthContent>
+		</>
 	);
 }
