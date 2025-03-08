@@ -6,6 +6,7 @@ import { Facebook, Instagram, MapPin } from "lucide-react";
 import Image from "next/image";
 
 // Import all main homepage components
+import Hero from "@/components/Hero/Hero";
 import { OurPhilosophy, LocationSelector, RestaurantPhoto } from "@/components";
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
       <Popup />
 
       {/* Hero section */}
-      <section id="home">
+      {/* <section id="home">
         <MaxWidthContent className="mt-8 flex flex-col gap-y-12 pl-14 ">
           <h1 className="text-4xl flex tracking-widest absolute top-100 left-10 lg:left-36 z-20">
             <span className="-rotate-90 uppercase inline-block font-medium text-4xl mb-4 ">
@@ -63,7 +64,8 @@ export default function Home() {
             className="w-full"
           />
         </figure>
-      </section>
+      </section> */}
+			<Hero />
 
       {/* Our Philosophy migrated to components folder*/}
       {/* <section id="ingredients">

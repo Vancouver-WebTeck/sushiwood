@@ -13,7 +13,7 @@ export default function LocationSelector() {
 			apiAddr: 'Fernie, BC',
 			name: 'Sushiwood - Fernie',
 			address: 'A-1221 7th Ave, Fernie, BC, Canada V0B 1M0',
-			image: '/Sushiwood/sushiwood-nelson.webp',
+			image: '/Sushiwood/sushiwood-fernie.webp',
 		},
 		{
 			apiAddr: 'Nelson, BC',

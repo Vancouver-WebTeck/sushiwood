@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MaxWidthContent from "@/_component/MaxWidthContent";
+import MaxWidthContent from "@/_component/MaxWidthContent"; 
 
 const photos = [
   { src: "/sushiwood/9-1.webp", delay: "1s" },
