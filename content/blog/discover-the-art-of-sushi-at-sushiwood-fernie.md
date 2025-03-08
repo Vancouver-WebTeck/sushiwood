@@ -6,16 +6,11 @@ Sushi is more than just food; it’s an art form that combines fresh ingredients
 
 ![Sushi Food](/uploads/image.png "Sushi")
 
-
-
 ## The Story Behind Sushi
-
 
 Sushi dates back over a thousand years to Japan, where it was originally a method of preserving fish in fermented rice. Over time, it evolved into the beautifully crafted dishes we know today—featuring fresh fish, perfectly seasoned rice, and a delicate balance of flavors. Whether you’re dining at a Fernie restaurant or exploring new culinary experiences, sushi remains a symbol of precision and dedication.
 
-## 
-What Makes Sushi Special?
-
+## What Makes Sushi Special?
 
 At SushiWood Fernie, we believe in using the finest ingredients and traditional techniques to create an unforgettable dining experience. Here’s what sets great Fernie sushi apart:
 
@@ -23,9 +18,7 @@ At SushiWood Fernie, we believe in using the finest ingredients and traditional 
 * Expert Preparation: Our skilled chefs carefully prepare each dish to ensure the right balance of texture and taste.
 * Innovative Creations: While we honor traditional sushi, we also love to experiment with new flavors and combinations.
 
-## 
-Must-Try Sushi at SushiWood Fernie
-
+## Must-Try Sushi at SushiWood Fernie
 
 If you’re looking for the best sushi in Fernie, here are some must-try dishes at our Fernie restaurant:
 
@@ -34,11 +27,8 @@ If you’re looking for the best sushi in Fernie, here are some must-try dishes 
 * Dragon Roll – A visually stunning roll with layers of eel, avocado, and a sweet-savory glaze.
 * Sashimi Platter – Perfect for those who love pure, high-quality fish without the rice. 
 
-## 
-The Sushi Experience in Fernie
-
+## The Sushi Experience in Fernie
 
 Whether you’re a long-time sushi lover or a first-time explorer, SushiWood Fernie offers an inviting and cozy atmosphere where you can enjoy handcrafted sushi in Fernie made with passion. Pair your meal with a warm cup of sake or a refreshing Japanese beer, and immerse yourself in a dining experience that celebrates authentic Japanese flavors. 
-
 
 Visit us today and discover why SushiWood Fernie is a must-visit Fernie restaurant for fresh, high-quality Fernie sushi!
