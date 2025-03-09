@@ -82,12 +82,12 @@ const Menu = () => {
         className="mySwiper"
       >
         {menuImageArr.map((el, index) => (
-          <SwiperSlide key={index} className="relative w-full h-96">
+          <SwiperSlide key={index} className="relative max-w-xl">
             <Image
               src={`${el}`}
               alt={"menu"}
-              height={400}
-              width={400}
+              height={3300}
+              width={2550}
               style={{ objectFit: "cover" }}
               unoptimized
             />
