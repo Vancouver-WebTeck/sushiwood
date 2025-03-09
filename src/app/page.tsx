@@ -8,6 +8,7 @@ import Image from "next/image";
 // Import all main homepage components
 import Hero from "@/components/Hero/Hero";
 import { OurPhilosophy, LocationSelector, RestaurantPhoto } from "@/components";
+import Menu from "@/_component/Menu";
 
 export default function Home() {
   return (
@@ -326,134 +327,7 @@ export default function Home() {
       <RestaurantPhoto />
 
       {/* Menu */}
-      <section id="menu">
-        <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
-          <div className="relative w-full text-center">
-            <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-            <h2 className="text-3xl z-10 font-brandon-text uppercase tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
-              Our Menu
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 md:gap-10">
-            {/* Individual menu items */}
-            <div className="flex flex-col items-center">
-              <h3 className="text-xl">Sushi 1</h3>
-              <span className="text-muted-foreground">fish fish fish</span>
-              <figure className="flex items-center justify-center h-full">
-                <Image
-                  height={100}
-                  width={100}
-                  src={"/Sushi1.png"}
-                  alt="Closer looks of sushi"
-                  sizes="100vw"
-                  className="h-25 w-40 md:h-25 md:w-60"
-                />
-              </figure>
-            </div>
-            {/* Individual menu items */}
-            <div className="flex flex-col items-center">
-              <h3 className="text-xl">Sushi 2</h3>
-              <span className="text-muted-foreground">fish fish fish</span>
-              <figure className="flex items-center justify-center h-full">
-                <Image
-                  height={100}
-                  width={100}
-                  src={"/Sushi2.png"}
-                  alt="Closer looks of sushi"
-                  sizes="100vw"
-                  className="h-25 w-40 md:h-25 md:w-60"
-                />
-              </figure>
-            </div>
-            {/* Individual menu items */}
-            <div className="flex flex-col items-center">
-              <h3 className="text-xl">Sushi 3</h3>
-              <span className="text-muted-foreground">fish fish fish</span>
-              <figure className="flex items-center justify-center h-full">
-                <Image
-                  height={100}
-                  width={100}
-                  src={"/Sushi3.png"}
-                  alt="Closer looks of sushi"
-                  sizes="100vw"
-                  className="h-25 w-40 md:h-25 md:w-60"
-                />
-              </figure>
-            </div>
-            {/* Individual menu items */}
-            <div className="flex flex-col items-center">
-              <h3 className="text-xl">Sushi 4</h3>
-              <span className="text-muted-foreground">fish fish fish</span>
-              <figure className="flex items-center justify-center h-full">
-                <Image
-                  height={100}
-                  width={100}
-                  src={"/Sushi4.png"}
-                  alt="Closer looks of sushi"
-                  sizes="100vw"
-                  className="h-25 w-40 md:h-25 md:w-60"
-                />
-              </figure>
-            </div>
-            {/* Individual menu items */}
-            <div className="flex flex-col items-center">
-              <h3 className="text-xl">Sushi 4</h3>
-              <span className="text-muted-foreground">fish fish fish</span>
-              <figure className="flex items-center justify-center h-full">
-                <Image
-                  height={100}
-                  width={100}
-                  src={"/Sushi5.png"}
-                  alt="Closer looks of sushi"
-                  sizes="100vw"
-                  className="h-25 w-40 md:h-25 md:w-60"
-                />
-              </figure>
-            </div>
-            {/* Individual menu items */}
-            <div className="flex flex-col items-center">
-              <h3 className="text-xl">Sushi 6</h3>
-              <span className="text-muted-foreground">fish fish fish</span>
-              <figure className="flex items-center justify-center h-full">
-                <Image
-                  height={100}
-                  width={100}
-                  src={"/Sushi6.png"}
-                  alt="Closer looks of sushi"
-                  sizes="100vw"
-                  className="h-25 w-40 md:h-25 md:w-60"
-                />
-              </figure>
-            </div>
-          </div>
-        </MaxWidthContent>
-      </section>
-
-      {/* Pricing */}
-      <section id="pricing">
-        <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
-          <div className="relative w-full text-center">
-            <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-            <h2 className="text-3xl z-10 font-brandon-text uppercase tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
-              Pricing
-            </h2>
-          </div>
-          <figure className="md:order-2 w-full h-full">
-            <Image
-              height={100}
-              width={100}
-              src={"/menu-pricing.png"}
-              alt="Menu Pricing"
-              style={{
-                objectFit: "contain",
-                height: "900px",
-              }}
-              sizes="100vw"
-              className="h-80 w-80 object-cover md:w-full md:h-full mx-auto"
-            />
-          </figure>
-        </MaxWidthContent>
-      </section>
+      <Menu />
 
       {/* Location Selector */}
       <section id="location">
