@@ -50,10 +50,9 @@ const Menu = () => {
     }
   }
 
-  console.log(selectedLocation);
   return (
     <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
-      <div className="relative w-full text-center">
+      <div id="menu" className="relative w-full text-center">
         <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
         <h2 className="text-3xl z-10 font-brandon-text uppercase tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
           {selectedLocation.split(",")[0]} Menu

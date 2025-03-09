@@ -2,16 +2,16 @@ import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 
 interface PopupState {
-  popup: boolean;
-  toggle: () => void;
+  popup: string;
+  toggle: (item: string) => void;
 }
 
 export const usePopupStore = create<PopupState>()(
   devtools(
     persist(
       (set) => ({
-        popup: false,
-        toggle: () => set((state) => ({ popup: !state.popup })),
+        popup: "",
+        toggle: (item) => set((state) => ({ popup: item })),
       }),
       {
         name: "popup-storage",

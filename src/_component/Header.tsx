@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import MaxWidthContent from "./MaxWidthContent";
 import Image from "next/image";
 import { motion } from "framer-motion";
-//TODO: scrollIntoView method or libraries like react-router-dom for navigation with smooth scroll behavior. react-scroll is bad 
-import { Link } from 'react-scroll';
+//TODO: scrollIntoView method or libraries like react-router-dom for navigation with smooth scroll behavior. react-scroll is bad
+import { Link } from "react-scroll";
 import {
   Contact,
   CookingPot,
@@ -24,7 +24,7 @@ const Header = () => {
   const [displayMenu, setDisplayMenu] = useState(true);
   const [animateHome, setAnimateHome] = useState(false);
 
-  const togglePopup = usePopupStore((state) => state.toggle);
+  const { toggle } = usePopupStore();
 
   const toggleMenu = () => {
     setDisplayMenu(!displayMenu);
@@ -47,9 +47,9 @@ const Header = () => {
         <Link to="home" smooth={true} duration={500} className="cursor-pointer">
           <figure className="overflow-hidden">
             <Image
-              height={100}
-              width={100}
-              src="/logo.png"
+              height={225}
+              width={225}
+              src="/sushiwood/main-logo.webp"
               alt="Clouds with text logo"
               className="h-15 w-10"
             />
@@ -67,12 +67,7 @@ const Header = () => {
         </button>
 
         <nav className="hidden sm:block">
-          <ul className="flex gap-10 items-center font-montserrat uppercase">
-            <li className="cursor-pointer">
-              <Link to="ingredients" smooth={true} duration={500}>
-                Ingredients
-              </Link>
-            </li>
+          <ul className="flex gap-6 items-center font-montserrat uppercase text-xs md:text-base">
             <li className="cursor-pointer">
               <Link to="about" smooth={true} duration={500}>
                 About
@@ -84,22 +79,27 @@ const Header = () => {
               </Link>
             </li>
             <li className="cursor-pointer">
-              <Link to="pricing" smooth={true} duration={500}>
-                Price
-              </Link>
-            </li>
-            <li className="cursor-pointer">
               <Link to="contact" smooth={true} duration={500}>
                 Contact
               </Link>
             </li>
             <li className="cursor-pointer">
-              <Button variant={"goldenborder"} onClick={togglePopup}>
+              <Button
+                variant={"goldenborder"}
+                onClick={() => toggle("reservation")}
+                className="text-xs md:text-base"
+              >
                 RESERVATIONS
               </Button>
             </li>
             <li className="cursor-pointer">
-              <Button variant={"goldenborder"}>ORDER NOW</Button>
+              <Button
+                className="text-xs md:text-base"
+                variant={"goldenborder"}
+                onClick={() => toggle("order")}
+              >
+                ORDER NOW
+              </Button>
             </li>
           </ul>
         </nav>
@@ -144,7 +144,7 @@ const Header = () => {
                 <p className="border-b-2 pl-20 pb-4">{formattedDate}</p>
                 <span className="pl-20 flex gap-2">
                   <Sun />
-                  <Weather/>
+                  <Weather />
                 </span>
               </div>
             </div>
@@ -160,7 +160,10 @@ const Header = () => {
             >
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: animateHome ? 0 : 1, y: animateHome ? 50 : 0 }}
+                animate={{
+                  opacity: animateHome ? 0 : 1,
+                  y: animateHome ? 50 : 0,
+                }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="flex flex-col cursor-pointer"
               >
@@ -180,7 +183,10 @@ const Header = () => {
             >
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: animateHome ? 0 : 1, y: animateHome ? 50 : 0 }}
+                animate={{
+                  opacity: animateHome ? 0 : 1,
+                  y: animateHome ? 50 : 0,
+                }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="flex flex-col cursor-pointer"
               >
@@ -200,7 +206,10 @@ const Header = () => {
             >
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: animateHome ? 0 : 1, y: animateHome ? 50 : 0 }}
+                animate={{
+                  opacity: animateHome ? 0 : 1,
+                  y: animateHome ? 50 : 0,
+                }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="flex flex-col cursor-pointer"
               >
@@ -220,7 +229,10 @@ const Header = () => {
             >
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: animateHome ? 0 : 1, y: animateHome ? 50 : 0 }}
+                animate={{
+                  opacity: animateHome ? 0 : 1,
+                  y: animateHome ? 50 : 0,
+                }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="flex flex-col cursor-pointer"
               >

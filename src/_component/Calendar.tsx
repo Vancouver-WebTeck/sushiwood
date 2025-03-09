@@ -60,6 +60,10 @@ const TIMES = [
   "10:00 PM",
 ];
 
+// Canadian phone number regex
+const canadianPhoneNumberRegex =
+  /^(\+?1\s?)?(\(?\d{3}\)?[\s.-]?)?\d{3}[\s.-]?\d{4}$/;
+
 const formSchema = z.object({
   dor: z.date({
     required_error: "A date of birth is required.",
@@ -72,10 +76,17 @@ const formSchema = z.object({
       required_error: "Please enter the number of people",
     })
     .min(1),
+  phoneNumber: z
+    .string({ required_error: "Phone number is required" })
+    .refine(
+      (value) => canadianPhoneNumberRegex.test(value),
+      "Invalid Canadian phone number. Please use a valid format (e.g., (123) 456-7890)."
+    ),
+  store: z.string({ required_error: "Please select a store" }), // Ensure store is a string
 });
 
 const Calendar = ({ classname }: { classname?: string }) => {
-  const toggle = usePopupStore((state) => state.toggle);
+  const { toggle } = usePopupStore();
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
@@ -84,28 +95,45 @@ const Calendar = ({ classname }: { classname?: string }) => {
       dor: new Date(),
       time: "11:00 AM",
       numberOfPeople: 1,
+      phoneNumber: "",
+      store: "fernie",
     },
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
-  }
+    try {
+      const response = await fetch("/api/sendemail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+      } else {
+        alert("Failed to send the message.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("An error occurred. Please try again.");
+    }
+  };
 
   return (
     <div
       className={cn(
-        "bg-black border-2 border-yellow-500 text-white rounded-2xl flex-none",
+        "bg-black border-2 border-yellow-500 text-white rounded-2xl my-16 flex-none",
         classname
       )}
     >
       {classname && (
         <button
-          onClick={toggle}
+          onClick={() => toggle("")}
           aria-label="close popover"
-          className="absolute top-2 right-2 "
+          className="absolute top-2 right-2"
         >
           <SidebarClose />
         </button>
@@ -113,7 +141,7 @@ const Calendar = ({ classname }: { classname?: string }) => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="p-4 flex flex-col mx-auto my-auto h-full justify-center space-y-8 w-72"
+          className="p-4 flex flex-col mx-auto h-full justify-center space-y-6 w-72 md:w-96"
         >
           <h2 className="text-center text-2xl font-medium">
             Book you reservations
@@ -191,7 +219,7 @@ const Calendar = ({ classname }: { classname?: string }) => {
             name="numberOfPeople"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Number Of People</FormLabel>
+                <FormLabel>Number of People</FormLabel>
                 <FormControl>
                   <Input
                     type="number"
@@ -205,8 +233,64 @@ const Calendar = ({ classname }: { classname?: string }) => {
             )}
           />
 
-          <Button variant={"ghost"} type="submit">
+          <FormField
+            control={form.control}
+            name="phoneNumber"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Phone</FormLabel>
+                <FormControl>
+                  <Input
+                    type="text" // Use "text" instead of "number"
+                    placeholder="(123) 456-7890)"
+                    className="bg-primary text-white"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="store"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Store</FormLabel>
+                <FormControl>
+                  <Select
+                    onValueChange={field.onChange} // Update form state when the value changes
+                    defaultValue={field.value} // Set the initial value
+                  >
+                    <SelectTrigger className="bg-primary text-white">
+                      <SelectValue placeholder="Select a store" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="fernie">Fernie</SelectItem>
+                      <SelectItem value="nelson" disabled>
+                        Nelson
+                      </SelectItem>
+                      <SelectItem value="castlegar" disabled>
+                        Castlegar
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <Button variant={"default"} type="submit">
             Book Now
+          </Button>
+          <span className="text-center">or</span>
+
+          <Button variant="goldenborder" asChild>
+            <a href="tel:+7785195255" aria-label="Call Us">
+              Call Us
+            </a>
           </Button>
         </form>
       </Form>
