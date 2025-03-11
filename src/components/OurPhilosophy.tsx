@@ -18,8 +18,8 @@ const OurPhilosophy = () => {
         </p>
 
         <div className="flex items-center gap-10 flex-col md:flex-row">
-          <div className="flex items-center gap-8 flex-col">
-            <figure className="flex-1">
+          <div className="flex gap-8 flex-col">
+            <figure className="flex justify-center">
               <Image
                 height={100}
                 width={100}
@@ -40,8 +40,8 @@ const OurPhilosophy = () => {
             </div>
           </div>
 
-          <div className="flex items-center  gap-8 flex-col">
-            <figure className="flex-1">
+          <div className="flex gap-8 flex-col">
+            <figure className="flex justify-center">
               <Image
                 height={100}
                 width={100}
@@ -63,8 +63,8 @@ const OurPhilosophy = () => {
             </div>
           </div>
 
-          <div className="flex items-center  gap-8 flex-col">
-            <figure className="flex-1">
+          <div className="flex gap-8 flex-col">
+            <figure className="flex justify-center">
               <Image
                 height={100}
                 width={100}

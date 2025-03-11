@@ -2,7 +2,7 @@
 'use client';
 import React from 'react';
 import { useLocation } from '../contexts/LocationContext';
-import MaxWidthContent from '@/_component/MaxWidthContent';
+// import MaxWidthContent from '@/_component/MaxWidthContent';
 import Image from 'next/image';
 
 

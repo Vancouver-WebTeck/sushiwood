@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/_component/Header";
 import { LocationProvider } from "@/contexts/LocationContext";
-import Footer from "@/_component/Footer";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +23,7 @@ export default function RootLayout({
         <LocationProvider>
           <Header />
           {children}
-          <Footer />
+					<Footer />
         </LocationProvider>
       </body>
     </html>
