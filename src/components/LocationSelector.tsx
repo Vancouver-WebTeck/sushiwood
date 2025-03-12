@@ -13,19 +13,19 @@ export default function LocationSelector() {
 			apiAddr: 'Fernie, BC',
 			name: 'Sushiwood - Fernie',
 			address: 'A-1221 7th Ave, Fernie, BC, Canada V0B 1M0',
-			image: '/Sushiwood/sushiwood-fernie.webp',
+			image: '/sushiwood/sushiwood-fernie.webp',
 		},
 		{
 			apiAddr: 'Nelson, BC',
 			name: 'Sushiwood - Nelson',
 			address: '702 Vernon St, Nelson, BC V1L 4G2',
-			image: '/Sushiwood/sushiwood-nelson.webp',
+			image: '/sushiwood/sushiwood-nelson.webp',
 		},
 		{
 			apiAddr: 'Castlegar, BC',
 			name: 'Sushiwood - Castegar',
 			address: 'Columbia Ave, castlegar, BC V1n 1a9',
-			image: '/Sushiwood/sushiwood-castlegar.webp',
+			image: '/sushiwood/sushiwood-castlegar.webp',
 		},
 	];
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MaxWidthContent from "@/_component/MaxWidthContent"; 
+import MaxWidthContent from "@/_component/MaxWidthContent";
 
 const photos = [
   { src: "/sushiwood/9-1.webp", delay: "1s" },
@@ -21,7 +21,7 @@ const RestaurantPhoto = () => {
           {photos.map((photo, index) => (
             <figure
               key={index}
-              className="overflow-hidden h-[300px] w-full flex items-center justify-center"
+              className="overflow-hidden h-auto w-full flex items-center justify-center"
             >
               <Image
                 height={300}
