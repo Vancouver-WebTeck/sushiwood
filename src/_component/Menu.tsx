@@ -59,9 +59,19 @@ const Menu = () => {
         </h2>
       </div>
       {selectedLocation === "Fernie, BC" && (
-        <div>
-          <button onClick={() => setMenuOption("food")}>Food Menu</button>
-          <button onClick={() => setMenuOption("drink")}>Drink Menu</button>
+        <div className="flex gap-4">
+          <button
+            className={`${menuOption == "food" && "underline"}`}
+            onClick={() => setMenuOption("food")}
+          >
+            Food Menu
+          </button>
+          <button
+            className={`${menuOption == "drink" && "underline"}`}
+            onClick={() => setMenuOption("drink")}
+          >
+            Drink Menu
+          </button>
         </div>
       )}
 

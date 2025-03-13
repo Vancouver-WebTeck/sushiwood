@@ -2,15 +2,15 @@ import Image from "next/image";
 import MaxWidthContent from "@/_component/MaxWidthContent";
 
 const photos = [
-  { src: "/sushiwood/9-1.webp", delay: "1s" },
-  { src: "/sushiwood/9-2.webp", delay: "7s" },
-  { src: "/sushiwood/9-3.webp", delay: "3s" },
-  { src: "/sushiwood/9-4.webp", delay: "5s" },
-  { src: "/sushiwood/9-5.webp", delay: "11s" },
-  { src: "/sushiwood/9-6.webp", delay: "1s" },
-  { src: "/sushiwood/9-7.webp", delay: "7s" },
-  { src: "/sushiwood/9-8.webp", delay: "2s" },
-  { src: "/sushiwood/9-9.webp", delay: "5s" },
+  { src: "/sushiwood/9-1.webp", delay: "1s", height: 582, width: 570 },
+  { src: "/sushiwood/9-2.webp", delay: "7s", height: 3200, width: 4800 },
+  { src: "/sushiwood/9-3.webp", delay: "3s", height: 575, width: 562 },
+  { src: "/sushiwood/9-4.webp", delay: "5s", height: 3200, width: 4800 },
+  { src: "/sushiwood/9-5.webp", delay: "11s", height: 1938, width: 1469 },
+  { src: "/sushiwood/9-6.webp", delay: "1s", height: 667, width: 1000 },
+  { src: "/sushiwood/9-7.webp", delay: "7s", height: 3200, width: 4800 },
+  { src: "/sushiwood/9-8.webp", delay: "2s", height: 582, width: 551 },
+  { src: "/sushiwood/9-9.webp", delay: "5s", height: 3200, width: 4800 },
 ];
 
 const RestaurantPhoto = () => {
@@ -24,12 +24,11 @@ const RestaurantPhoto = () => {
               className="overflow-hidden h-auto w-full flex items-center justify-center"
             >
               <Image
-                height={300}
-                width={300}
+                height={photo.height}
+                width={photo.width}
                 src={photo.src}
-                alt="Closer looks of sushi"
-                sizes="300px"
-                className="object-cover h-full w-full animate-blink"
+                alt={`Closer looks of sushi ${index}`}
+                className="object-cover h-full w-full animate-blink max-h-80 hover:animate-none"
                 style={{ animationDelay: photo.delay }}
               />
             </figure>
