@@ -9,16 +9,13 @@ const Reservation = () => {
   return (
     <div
       className={
-        "bg-black border-2 border-yellow-500 text-white rounded-2xl flex-none absolute h-fit top-1/2 -translate-y-1/2 p-8"
+        "bg-black border-2 border-yellow-500 text-white rounded-2xl flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-8 w-auto max-w-full"
       }
     >
-      <button
-        onClick={() => toggle("")}
-        aria-label="close popover"
-        className="absolute top-2 right-2"
-      >
-        <SidebarClose />
-      </button>
+				<button onClick={() => toggle('')} aria-label='close popover' className='absolute top-2 sm:top-2 right-2 flex items-center gap-2'>
+					<span>Close</span>
+					<SidebarClose />
+				</button>
 
       <div className="p-4 flex flex-col mx-auto my-auto h-full justify-center space-y-6 w-72 md:w-96">
         <h2 className="text-center text-2xl font-medium">Choose a location</h2>
