@@ -4,10 +4,9 @@ import nodemailer from "nodemailer";
 export async function POST(req: Request) {
   try {
     const { dor, time, numberOfPeople, phoneNumber } = await req.json();
-
     // Configure the transporter
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST, // Your SMTP host
+      host: "smtp.gmail.com", // Your SMTP host
       port: 465, // SMTP port (usually 587 for TLS)
       auth: {
         user: process.env.SMTP_USER, // Your SMTP username
@@ -18,7 +17,7 @@ export async function POST(req: Request) {
     // Send the email
     await transporter.sendMail({
       from: '"Sushiwood" <sushiwoodinfo@gmail.com>', // Replace with your details
-      to: "sushiwoodinfo@gmail.com", // Replace with your email
+      to: process.env.EMAIL_TO, // Replace with your email
       subject: "Booking Form Submission",
       html: `
         <h1>Form Submission</h1>
