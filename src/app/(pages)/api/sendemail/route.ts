@@ -4,6 +4,8 @@ import nodemailer from "nodemailer";
 export async function POST(req: Request) {
   try {
     const { dor, time, numberOfPeople, phoneNumber } = await req.json();
+
+    console.log("WHy is this no trunning");
     // Configure the transporter
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com", // Your SMTP host
