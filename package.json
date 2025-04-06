@@ -51,5 +51,11 @@
     "redux-devtools-extension": "^2.13.9",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "trim": "^0.0.3",
+      "dompurify": "^3.2.4"
+    }
   }
 }
