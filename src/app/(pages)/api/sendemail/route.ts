@@ -5,21 +5,17 @@ export async function POST(req: Request) {
   try {
     const { dor, time, numberOfPeople, phoneNumber } = await req.json();
 
-    console.log("WHy is this no trunning");
-    // Configure the transporter
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com", // Your SMTP host
-      port: 465, // SMTP port (usually 587 for TLS)
+      host: "smtp.gmail.com",
+      port: 465,
       auth: {
-        user: process.env.SMTP_USER, // Your SMTP username
-        pass: process.env.SMTP_PASS, // Your SMTP password
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
-
-    // Send the email
     await transporter.sendMail({
-      from: '"Sushiwood" <sushiwoodinfo@gmail.com>', // Replace with your details
-      to: process.env.EMAIL_TO, // Replace with your email
+      from: '"Sushiwood" <sushiwoodinfo@gmail.com>',
+      to: process.env.EMAIL_TO,
       subject: "Booking Form Submission",
       html: `
         <h1>Form Submission</h1>
