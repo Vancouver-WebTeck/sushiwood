@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import MaxWidthContent from './MaxWidthContent';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-//TODO: scrollIntoView method or libraries like react-router-dom for navigation with smooth scroll behavior. react-scroll is bad
 import { Link } from 'react-scroll';
 import { Contact, CookingPot, Facebook, Home, Info, Instagram, MapPin, Sun, User, UtensilsCrossed } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -29,7 +28,6 @@ const Header = () => {
 		year: 'numeric',
 	};
 	const formattedDate = today.toLocaleDateString('en-US', options);
-	// .replace(",", "");
 
 	return (
 		<header className='sticky top-0 bg-black/85 z-50 border-b border-gray-600'>
@@ -85,7 +83,7 @@ const Header = () => {
 			>
 				{/* image overlay */}
 				<figure>
-					<Image src='/sushiwood/our-philosophy-2.webp' alt='Location' fill className='opacity-40 object-cover' />
+					<Image src='/sushiwood/9-6.webp' alt='Location room setting' fill className='opacity-40 object-cover' />
 				</figure>
 
 				{/* menu section */}

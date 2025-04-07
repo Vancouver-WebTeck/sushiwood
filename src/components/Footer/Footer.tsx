@@ -56,6 +56,7 @@ const Footer = () => {
 
 						<div className='flex-grow justify-center overflow-hidden flex-shrink min-h-80 min-w-72'>
 							<iframe
+								title='Google Maps location'
 								src={currentLocation.mapSrc}
 								width='100%'
 								height='100%'
