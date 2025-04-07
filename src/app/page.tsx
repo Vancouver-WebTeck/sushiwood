@@ -27,7 +27,7 @@ export default function Home() {
             />
           </figure>
 
-          <div className="text-black py-32 px-20 flex flex-col gap-10 text-lg">
+          <div className="text-black py-32 px-4 md:px-20 flex flex-col gap-10 text-lg">
             <h2 className="text-2xl font-bold lg:text-4xl lg:mb-6 ">
               Experience Japanese & Korean Flavors in Fernie, BC
             </h2>

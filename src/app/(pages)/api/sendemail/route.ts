@@ -3,7 +3,10 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    const { dor, time, numberOfPeople, phoneNumber } = await req.json();
+    const { name, dor, time, numberOfPeople, phoneNumber } = await req.json();
+    const updatedDor = dor.slice(0, 10);
+
+    console.log(updatedDor);
 
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -18,13 +21,36 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: '"Sushiwood" <sushiwoodinfo@gmail.com>',
       to: process.env.EMAIL_TO,
-      subject: "Booking Form Submission",
+      subject: "Reservation form",
       html: `
-        <h1>Form Submission</h1>
-        <p><strong>Date of reservation:</strong> ${dor}</p>
-        <p><strong>Time:</strong> ${time}</p>
-        <p><strong>Number of People:</strong> ${numberOfPeople}</p>
-        <p><strong>Phon eNumber:</strong> ${phoneNumber}</p>
+      <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px; border: 1px solid #ddd; border-radius: 8px; max-width: 600px; margin: auto;">
+        <h2 style="color: #2c3e50;">Reservation Confirmation</h2>
+        <p>Dear owner,</p>
+        <p>You got a reservation for ${name}. Here are the details of the reservation:</p>
+
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+          <tr>
+            <td style="padding: 8px; font-weight: bold;">📅 Date of Reservation:</td>
+            <td style="padding: 8px;">${updatedDor}</td>
+          </tr>
+          <tr style="background-color: #f9f9f9;">
+            <td style="padding: 8px; font-weight: bold;">⏰ Time:</td>
+            <td style="padding: 8px;">${time}</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; font-weight: bold;">👥 Number of People:</td>
+            <td style="padding: 8px;">${numberOfPeople}</td>
+          </tr>
+          <tr style="background-color: #f9f9f9;">
+            <td style="padding: 8px; font-weight: bold;">📞 Phone Number:</td>
+            <td style="padding: 8px;">${phoneNumber}</td>
+          </tr>
+        </table>
+
+        <p style="margin-top: 30px;">If you have any questions or need to make changes, feel free to contact us.</p>
+
+        <p style="margin-top: 40px;">Best regards,<br><strong>Sushiwood</strong></p>
+      </div>
       `,
     });
 

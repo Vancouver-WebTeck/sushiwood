@@ -10,7 +10,7 @@ const Popup = () => {
 
   return popup === "reservation" ? (
     <section className="fixed flex justify-center overflow-scroll inset-0 z-50 bg-black/60">
-      <Calendar classname="absolute h-fit top-1/2 -translate-y-1/2 p-8" />
+      <Calendar classname="relative h-fit p-8 bottom-4 top-0" />
     </section>
   ) : popup === "order" ? (
     <section className="fixed flex justify-center overflow-scroll inset-0 z-50 bg-black/60">

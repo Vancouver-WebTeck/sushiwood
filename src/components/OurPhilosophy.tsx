@@ -4,15 +4,15 @@ import MaxWidthContent from "@/_component/MaxWidthContent";
 const OurPhilosophy = () => {
   return (
     <section id="ingredients">
-      <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14 py-12">
+      <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-4 md:px-14 py-12">
         <div className="relative w-full text-center">
           <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-          <h2 className="text-3xl z-10 font-brandon-text uppercase tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
+          <h2 className="text-2xl md:text-3xl z-10 font-semibold tracking-wider uppercase  w-40 md:w-fit md:bg-black md:px-8 mx-auto">
             OUR Philosophy
           </h2>
         </div>
 
-        <p className="max-w-[634px] text-2xl text-center">
+        <p className="max-w-[634px] text-center">
           At SushiWood Fernie, our philosophy is rooted in three key values:
           quality, tradition, and community.
         </p>
