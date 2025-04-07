@@ -49,7 +49,9 @@ export default function Hero() {
           width={2000}
           src="/sushiwood/hero-img.webp"
           alt="long line of sushi"
+          loading="eager"
           sizes="100vw"
+          priority={true}
           style={{
             objectFit: "cover",
             height: "900px",
