@@ -30,26 +30,19 @@ const Menu = () => {
   } else if (selectedLocation === "Castlegar, BC") {
     menuImageArr = ["/sushiwood/castlegar-menu/comming-soon.jpg"];
   } else {
-    if (menuOption === "food") {
-      menuImageArr = [
-        "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-1.webp",
-        "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-2.webp",
-        "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-3.webp",
-        "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-4.webp",
-        "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-5.webp",
-        "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-6.webp",
-        "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-7.webp",
-        "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-8.webp",
-        "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-9.webp",
-        "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-10.webp",
-        "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-11.webp",
-      ];
-    } else {
-      menuImageArr = [
-        "sushiwood/fernie-menu/drink-menu/drink-menu-01.webp",
-        "sushiwood/fernie-menu/drink-menu/drink-menu-02.webp",
-      ];
-    }
+    menuImageArr = [
+      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-1.webp",
+      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-2.webp",
+      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-3.webp",
+      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-4.webp",
+      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-5.webp",
+      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-6.webp",
+      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-7.webp",
+      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-8.webp",
+      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-9.webp",
+      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-10.webp",
+      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-11.webp",
+    ];
   }
 
   const handleModalToggle = () => {
@@ -64,22 +57,6 @@ const Menu = () => {
           {selectedLocation.split(",")[0]} Menu
         </h2>
       </div>
-      {selectedLocation === "Fernie, BC" && (
-        <div className="flex gap-4">
-          <button
-            className={`${menuOption == "food" && "underline"}`}
-            onClick={() => setMenuOption("food")}
-          >
-            Food Menu
-          </button>
-          <button
-            className={`${menuOption == "drink" && "underline"}`}
-            onClick={() => setMenuOption("drink")}
-          >
-            Drink Menu
-          </button>
-        </div>
-      )}
 
       {/* Button to open the modal on mobile */}
       <div className="block md:hidden mt-4">
@@ -115,7 +92,7 @@ const Menu = () => {
               alt={"menu"}
               height={3960}
               width={3060}
-              style={{ minHeight: "600px",  }}
+              style={{ minHeight: "600px" }}
               unoptimized
             />
           </SwiperSlide>
