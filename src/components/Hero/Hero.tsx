@@ -50,13 +50,12 @@ export default function Hero() {
           src="/sushiwood/hero-img.webp"
           alt="long line of sushi"
           loading="eager"
-          sizes="100vw"
+          sizes="(max-width: 675px) 675px, (max-width: 1350px) 1350px, 2700px"
           priority={true}
           style={{
             objectFit: "cover",
-            height: "900px",
           }}
-          className="w-full"
+          className="w-full h-[900px] md:h-screen"
         />
       </figure>
     </section>
