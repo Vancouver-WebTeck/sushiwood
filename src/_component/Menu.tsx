@@ -15,7 +15,6 @@ import { SidebarClose } from "lucide-react";
 
 const Menu = () => {
   const { selectedLocation } = useLocation();
-  const [menuOption, setMenuOption] = useState("food");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   let menuImageArr = [];
@@ -50,7 +49,7 @@ const Menu = () => {
   };
 
   return (
-    <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
+    <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-4 md:px-14">
       <div id="menu" className="relative w-full text-center">
         <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
         <h2 className="text-3xl z-10 font-brandon-text uppercase tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
@@ -90,9 +89,9 @@ const Menu = () => {
             <Image
               src={`${el}`}
               alt={"menu"}
-              height={3960}
-              width={3060}
-              style={{ minHeight: "600px" }}
+              height={3300}
+              width={2550}
+              style={{ objectFit: "cover" }}
               unoptimized
             />
           </SwiperSlide>
