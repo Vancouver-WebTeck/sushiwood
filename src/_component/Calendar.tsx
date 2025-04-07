@@ -33,10 +33,6 @@ import { Input } from "@/components/ui/input";
 import { usePopupStore } from "@/stores/Popup";
 
 const TIMES = [
-  "10:00 AM",
-  "10:30 AM",
-  "11:00 AM",
-  "11:30 AM",
   "12:00 PM",
   "12:30 PM",
   "1:00 PM",
@@ -56,8 +52,6 @@ const TIMES = [
   "8:00 PM",
   "8:30 PM",
   "9:00 PM",
-  "9:30 PM",
-  "10:00 PM",
 ];
 
 // Canadian phone number regex
@@ -95,7 +89,7 @@ const Calendar = ({ classname }: { classname?: string }) => {
     defaultValues: {
       name: "",
       dor: new Date(),
-      time: "11:00 AM",
+      time: "12:00 PM",
       numberOfPeople: 1,
       phoneNumber: "",
       store: "fernie",

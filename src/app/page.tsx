@@ -34,7 +34,7 @@ export default function Home() {
             <p>
               Welcome to SushiWood Fernie, the newest restaurant in Fernie
               offering the best of Japanese and Korean cuisine. Located in the
-              heart of Fernie, we bring you fresh ingredients, traditional
+              heart of Fernie, we bring you fresh ingredients, fusion of
               flavors, and modern culinary techniques to deliver a dining
               experience that’s both delicious and affordable. Whether
               you&apos;re looking for sushi in Fernie or other classic Fernie
@@ -51,10 +51,9 @@ export default function Home() {
             <p>
               As a proud member of the Fernie restaurant community, we are
               committed to offering a welcoming atmosphere where both locals and
-              visitors can enjoy fresh, vibrant flavors, friendly service, and
-              an unforgettable dining experience. Come visit us and taste the
-              finest sushi in Fernie—a local favorite for all your Japanese and
-              Korean cravings!
+              visitors can enjoy fresh, vibrant flavors and friendly service.
+              Come visit us and taste the sushi in Fernie—a local
+              favorite for all your Japanese and Korean cravings!
             </p>
             <div className="flex flex-row-reverse gap-4">
               <Image

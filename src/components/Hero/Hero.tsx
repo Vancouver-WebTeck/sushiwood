@@ -20,9 +20,10 @@ export default function Hero() {
             <span className=" text-7xl">験</span>
           </span>
           <span className="text-3xl self-end ml-2 tracking-wide ">
-            Best <br />
-            Sushi <br />
-            Experience
+            Korean <br />
+            and <br />
+            Japanese <br />
+            Fusion
           </span>
         </h1>
 

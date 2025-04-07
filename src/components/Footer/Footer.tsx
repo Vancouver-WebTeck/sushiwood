@@ -93,9 +93,21 @@ const Footer = () => {
 								<p>Sun: 11:00am - 10:00pm</p>
 							</div>
 
-							<div className='flex gap-4'>
-								<Facebook className='h-8 w-8' />
-								<Instagram className='h-8 w-8' />
+							<div className="flex gap-4">
+								<a
+									href="https://www.facebook.com/media/set/?set=a.750329719694381"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Facebook className="h-8 w-8 cursor-pointer" />
+								</a>
+								<a
+									href="https://www.instagram.com/ferniesushiwood/?hl=en"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Instagram className="h-8 w-8 cursor-pointer" />
+								</a>
 							</div>
 						</div>
 					</div>

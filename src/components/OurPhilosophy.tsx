@@ -14,7 +14,7 @@ const OurPhilosophy = () => {
 
         <p className="max-w-[634px] text-center">
           At SushiWood Fernie, our philosophy is rooted in three key values:
-          quality, tradition, and community.
+          quality, innovation, and community.
         </p>
 
         <div className="flex items-center gap-10 flex-col md:flex-row">
@@ -33,7 +33,7 @@ const OurPhilosophy = () => {
             <div className="flex flex-col gap-2 text-center">
               <h3 className="text-xl uppercase">Quality</h3>
               <p>
-                We believe that great food starts with the finest ingredients.
+                We believe that great food starts with the fresh ingredients.
                 From fresh seafood to carefully selected produce, we ensure that
                 every dish meets the highest standards of freshness and flavor.
               </p>
@@ -53,12 +53,12 @@ const OurPhilosophy = () => {
             </figure>
 
             <div className="flex flex-col gap-2 text-center">
-              <h3 className="text-xl uppercase">Tradition</h3>
+              <h3 className="text-xl uppercase">Innovation</h3>
               <p>
-                Honoring the rich culinary heritage of Japanese and Korean
-                cuisine, we craft each dish with authenticity while adding our
-                own modern touch. Whether it’s sushi, sashimi, or Korean
-                specialties, we stay true to time-honored techniques.
+                Blending Japanese and Korean cuisine, 
+                we craft each dish with authentic flavors and a modern touch. 
+                From sushi and sashimi to Korean specialties, 
+                we honor time-tested techniques with creative flair.
               </p>
             </div>
           </div>
@@ -68,7 +68,7 @@ const OurPhilosophy = () => {
               <Image
                 height={100}
                 width={100}
-                src={"/sushiwood/our-philosophy-3.webp"}
+                src={"/sushiwood/9-6.webp"}
                 alt="Closer looks of sushi"
                 sizes="100vw"
                 className="h-80 w-80 rounded-full object-cover md:rounded-none md:w-full"

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 //TODO: scrollIntoView method or libraries like react-router-dom for navigation with smooth scroll behavior. react-scroll is bad
 import { Link } from 'react-scroll';
-import { Contact, CookingPot, Facebook, Home, Info, Instagram, MapPin, Sun } from 'lucide-react';
+import { Contact, CookingPot, Facebook, Home, Info, Instagram, MapPin, Sun, User, UtensilsCrossed } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { usePopupStore } from '@/stores/Popup';
 import Weather from '@/components/ui/currentTemperature';
@@ -85,7 +85,7 @@ const Header = () => {
 			>
 				{/* image overlay */}
 				<figure>
-					<Image src='/location-by-durston-saylor.webp' alt='Location' fill className='opacity-40' />
+					<Image src='/sushiwood/our-philosophy-2.webp' alt='Location' fill className='opacity-40 object-cover' />
 				</figure>
 
 				{/* menu section */}
@@ -130,7 +130,7 @@ const Header = () => {
 								className='flex flex-col cursor-pointer'
 							>
 								<span>Home</span>
-								<span className='bg-black p-3 rounded-full border-2 border-white w-fit'>
+								<span className='bg-black p-3 rounded-full  w-fit'>
 									<Home />
 								</span>
 							</motion.div>
@@ -147,8 +147,8 @@ const Header = () => {
 								className='flex flex-col cursor-pointer'
 							>
 								<span>About</span>
-								<span className='bg-black p-3 rounded-full border-2 border-white w-fit'>
-									<Info />
+								<span className='bg-black p-3 rounded-full w-fit'>
+									<User />
 								</span>
 							</motion.div>
 						</Link>
@@ -164,8 +164,8 @@ const Header = () => {
 								className='flex flex-col cursor-pointer'
 							>
 								<span>Menu</span>
-								<span className='bg-black p-3 rounded-full border-2 border-white w-fit'>
-									<CookingPot />
+								<span className='bg-black p-3 rounded-full w-fit'>
+								<UtensilsCrossed />
 								</span>
 							</motion.div>
 						</Link>
@@ -181,7 +181,7 @@ const Header = () => {
 								className='flex flex-col cursor-pointer'
 							>
 								<span>Contact</span>
-								<span className='bg-black p-3 rounded-full border-2 border-white w-fit'>
+								<span className='bg-black p-3 rounded-full w-fit'>
 									<Contact />
 								</span>
 							</motion.div>
@@ -190,9 +190,15 @@ const Header = () => {
 				</main>
 
 				<footer className='absolute bottom-3 flex items-center justify-center mx-auto w-full gap-4'>
-					<MapPin className='h-8 w-8 cursor-pointer' />
-					<Facebook className='h-8 w-8 cursor-pointer' />
-					<Instagram className='h-8 w-8 cursor-pointer' />
+					<a href="https://maps.app.goo.gl/8gs1Utxdh21Wfe1N9" target="_blank" rel="noopener noreferrer">
+						<MapPin className="h-8 w-8 cursor-pointer" />
+					</a>
+					<a href="https://www.facebook.com/media/set/?set=a.750329719694381" target="_blank" rel="noopener noreferrer">
+						<Facebook className="h-8 w-8 cursor-pointer" />
+					</a>
+					<a href="https://www.instagram.com/ferniesushiwood/?hl=en" target="_blank" rel="noopener noreferrer">
+						<Instagram className="h-8 w-8 cursor-pointer" />
+					</a>
 				</footer>
 			</div>
 		</header>
