@@ -13,20 +13,23 @@ import { useLocation } from "@/contexts/LocationContext";
 
 import { SidebarClose } from "lucide-react";
 
-const Menu = () => {
-  const { selectedLocation } = useLocation();
+const Menu = ({
+  location,
+}: {
+  location: "fernie" | "nelson" | "castlegar";
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   let menuImageArr = [];
 
-  if (selectedLocation === "Nelson, BC") {
+  if (location === "nelson") {
     menuImageArr = [
       "sushiwood/nelson-menu/nelson-menu-1.webp",
       "sushiwood/nelson-menu/nelson-menu-2.webp",
       "sushiwood/nelson-menu/nelson-menu-3.webp",
       "sushiwood/nelson-menu/nelson-menu-4.webp",
     ];
-  } else if (selectedLocation === "Castlegar, BC") {
+  } else if (location === "castlegar") {
     menuImageArr = ["/sushiwood/castlegar-menu/comming-soon.jpg"];
   } else {
     menuImageArr = [
@@ -53,7 +56,7 @@ const Menu = () => {
       <div id="menu" className="relative w-full text-center">
         <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
         <h2 className="text-3xl z-10 font-brandon-text uppercase tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
-          {selectedLocation.split(",")[0]} Menu
+          {location} Menu
         </h2>
       </div>
 

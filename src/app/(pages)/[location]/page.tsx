@@ -4,7 +4,12 @@ import { LocationSelector, OurPhilosophy, RestaurantPhoto } from "@/components";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
 
-export default function Home() {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ location: "fernie" | "nelson" | "castlegar" }>;
+}) {
+  const { location } = await params;
   return (
     <>
       <main className="flex flex-col gap-y-24">
@@ -86,9 +91,9 @@ export default function Home() {
         </div>
       </section> */}
         <RestaurantPhoto />
-        <Menu location="fernie" />
+        <Menu location={location} />
       </main>
-      <Footer location="fernie" />
+      <Footer location={location} />
     </>
   );
 }
