@@ -10,11 +10,11 @@ export default function Hero() {
     <section id="home">
       <MaxWidthContent className="mt-8 flex flex-col gap-y-12 pl-14 ">
         <h1 className="text-5xl flex flex-col tracking-widest absolute top-48 z-20 ">
-          <span className="uppercase tracking-tight inline-block font-medium text-5xl">
+          <span className="uppercase tracking-tight font-medium text-4xl md:text-5xl">
             Sushiwood
           </span>
           <div className="w-80 h-0.5 my-2" />
-          <span className="text-3xl tracking-tighter self-end">
+          <span className="text-2xl md:text-3xl tracking-tighter self-end">
             Korean & Japanese Restaurant
           </span>
         </h1>
