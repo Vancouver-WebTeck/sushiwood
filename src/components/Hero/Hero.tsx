@@ -9,21 +9,13 @@ export default function Hero() {
   return (
     <section id="home">
       <MaxWidthContent className="mt-8 flex flex-col gap-y-12 pl-14 ">
-        <h1 className="text-4xl flex tracking-widest absolute top-100 left-10 lg:left-36 z-20">
-          <span className="-rotate-90 uppercase inline-block font-medium text-4xl mb-4 ">
+        <h1 className="text-4xl flex flex-col tracking-widest absolute top-48 z-20 ">
+          <span className="uppercase tracking-tight inline-block font-medium text-4xl">
             Sushiwood
           </span>
-          <span className="flex flex-col font-bold -ml-52">
-            <span className="text-7xl">寿</span>
-            <span className=" text-7xl">司</span>
-            <span className=" text-7xl">体</span>
-            <span className=" text-7xl">験</span>
-          </span>
-          <span className="text-3xl self-end ml-2 tracking-wide ">
-            Korean <br />
-            and <br />
-            Japanese <br />
-            Fusion
+          <div className="w-80 h-0.5 my-0.5" />
+          <span className="text-3xl tracking-tighter self-end">
+            Korean & Japanese Restaurant
           </span>
         </h1>
 
@@ -43,7 +35,8 @@ export default function Hero() {
         </Button>
       </MaxWidthContent>
 
-      <figure className="w-full -mt-12 -z-20 ">
+      <figure className="w-full relative -mt-12 -z-20 ">
+        <div className="fixed inset-0 opacity-45 bg-black"></div>
         <Image
           height={500}
           width={2000}

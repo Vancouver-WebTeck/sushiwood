@@ -10,7 +10,7 @@ const locations = [
 		name: 'Sushiwood - Fernie',
 		address: 'A-1221 7th Ave, Fernie, BC, Canada V0B 1M0',
 		phone: '(778) 519-5255',
-		email: 'sushiwoodfernie@gmail.com',
+		email: 'sushiwoodinfo@gmail.com',
 		mapSrc:
 			'https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d82898.26600540926!2d-115.14409555260812!3d49.51149844043173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x53656b8c5c873351%3A0x16f724005cb5e06!2s1221%207%20Ave%2C%20Fernie%2C%20BC%20V0B%201M0!3m2!1d49.5115376!2d-115.06171909999999!5e0!3m2!1sen!2sca!4v1741678003246!5m2!1sen!2sca',
 	},

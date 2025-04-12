@@ -34,7 +34,7 @@ const Reservation = () => {
             Nelson - Call us
           </a>
         </Button>
-        <Button variant={"default"}>Fernie - Comming Soon</Button>
+        <Button variant={"default"}>Castlegar - Comming Soon</Button>
       </div>
     </div>
   );

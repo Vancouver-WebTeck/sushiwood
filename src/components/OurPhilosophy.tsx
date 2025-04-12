@@ -8,14 +8,9 @@ const OurPhilosophy = () => {
         <div className="relative w-full text-center">
           <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
           <h2 className="text-2xl md:text-3xl z-10 font-semibold tracking-wider uppercase  w-40 md:w-fit md:bg-black md:px-8 mx-auto">
-            OUR Philosophy
+            Who We Are
           </h2>
         </div>
-
-        <p className="max-w-[634px] text-center">
-          At SushiWood Fernie, our philosophy is rooted in three key values:
-          quality, innovation, and community.
-        </p>
 
         <div className="flex items-center gap-10 flex-col md:flex-row">
           <div className="flex gap-8 flex-col">
@@ -31,11 +26,9 @@ const OurPhilosophy = () => {
             </figure>
 
             <div className="flex flex-col gap-2 text-center">
-              <h3 className="text-xl uppercase">Quality</h3>
+              <h3 className="text-xl uppercase">Vision</h3>
               <p>
-                We believe that great food starts with the fresh ingredients.
-                From fresh seafood to carefully selected produce, we ensure that
-                every dish meets the highest standards of freshness and flavor.
+                Our vision is to be a culinary haven where diversity is celebrated, and culinary boundaries are pushed to new heights.
               </p>
             </div>
           </div>
@@ -53,12 +46,9 @@ const OurPhilosophy = () => {
             </figure>
 
             <div className="flex flex-col gap-2 text-center">
-              <h3 className="text-xl uppercase">Innovation</h3>
+              <h3 className="text-xl uppercase">Mission</h3>
               <p>
-                Blending Japanese and Korean cuisine, 
-                we craft each dish with authentic flavors and a modern touch. 
-                From sushi and sashimi to Korean specialties, 
-                we honor time-tested techniques with creative flair.
+               Our mission is to provide a culunary journey that delights the senses, fosters cultural appreciation, and brings people together in a spirit of warmth and hospitality.
               </p>
             </div>
           </div>
@@ -76,12 +66,9 @@ const OurPhilosophy = () => {
             </figure>
 
             <div className="flex flex-col gap-2 text-center">
-              <h3 className="text-xl uppercase">Community</h3>
+              <h3 className="text-xl uppercase">Value</h3>
               <p>
-                As a proud part of Fernie, we are more than just a
-                restaurant—we are a place where locals and visitors come
-                together to enjoy delicious food in a warm and welcoming
-                atmosphere.
+                Korean & Japanese restaurant offers a fusion of two distinct culinary traditions, providing a range of values that appeal to diverse taste.
               </p>
             </div>
           </div>
