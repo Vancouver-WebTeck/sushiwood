@@ -10,7 +10,7 @@ const photos = [
   { src: "/sushiwood/9-6.webp", delay: "1s", height: 667, width: 1000 },
   { src: "/sushiwood/9-7.webp", delay: "7s", height: 3200, width: 4800 },
   { src: "/sushiwood/9-8.webp", delay: "2s", height: 582, width: 551 },
-  { src: "/sushiwood/9-9.webp", delay: "5s", height: 3200, width: 4800 },
+  { src: "/sushiwood/9-9.png", delay: "5s", height: 3200, width: 4800 },
 ];
 
 const RestaurantPhoto = () => {

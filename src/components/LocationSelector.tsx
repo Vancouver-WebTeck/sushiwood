@@ -24,7 +24,7 @@ export default function LocationSelector() {
 		{
 			apiAddr: 'Castlegar, BC',
 			name: 'Sushiwood - Castegar',
-			address: 'Columbia Ave, castlegar, BC V1n 1a9',
+			address: 'Columbia Ave, Castlegar, BC V1N 1A9',
 			image: '/sushiwood/sushiwood-castlegar.webp',
 		},
 	];
@@ -41,14 +41,16 @@ export default function LocationSelector() {
               selectedLocation === loc.apiAddr ? 'border-2 border-yellow-500 scale-105' : ''
             }`}
           >
-            {/* Image */}
-            <Image
-              src={loc.image}
-              alt={loc.name}
-							width={256}
-							height={192}
-              className="w-64 h-48 object-cover"
-            />
+           <div className="relative w-80 h-60">
+				<Image
+					src={loc.image}
+					alt={loc.name}
+					fill
+					sizes="(min-width: 768px) 320px, 100vw"
+					className="object-cover rounded"
+					priority // optional, improves LCP if above the fold
+				/>
+			</div>
             {/* Overlay with location details */}
             <div
               className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-2 text-center"

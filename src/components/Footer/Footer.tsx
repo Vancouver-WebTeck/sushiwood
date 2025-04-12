@@ -8,11 +8,13 @@ const locations = [
 	{
 		apiAddr: 'Fernie, BC',
 		name: 'Sushiwood - Fernie',
-		address: 'A-1221 7th Ave, Fernie, BC, Canada V0B 1M0',
+		address: '1221 7th Ave, Fernie, BC, Canada V0B 1M0',
 		phone: '(778) 519-5255',
 		email: 'sushiwoodinfo@gmail.com',
 		mapSrc:
-			'https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d82898.26600540926!2d-115.14409555260812!3d49.51149844043173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x53656b8c5c873351%3A0x16f724005cb5e06!2s1221%207%20Ave%2C%20Fernie%2C%20BC%20V0B%201M0!3m2!1d49.5115376!2d-115.06171909999999!5e0!3m2!1sen!2sca!4v1741678003246!5m2!1sen!2sca',
+			'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2590.5690801206556!2d-115.0642701231249!3d49.51153115452134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53656b8c5c873351%3A0x16f724005cb5e06!2sSushiwood%20Fernie!5e0!3m2!1sen!2sca!4v1744418675586!5m2!1sen!2sca',
+		facebooklink: 'https://www.facebook.com/sushiwood.fernie',
+		instagramlink: 'https://www.instagram.com/explore/locations/921303561362002/sushi-wood-fernie/',
 	},
 	{
 		apiAddr: 'Nelson, BC',
@@ -22,6 +24,8 @@ const locations = [
 		email: 'sushiwoodnelson@gmail.com',
 		mapSrc:
 			'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2591.5084749783296!2d-117.291703!3d49.493791099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537cb76f8a5e01a3%3A0x26fbf94747cfc32c!2sSushi%20Wood%20Nelson!5e0!3m2!1sen!2sca!4v1741678380888!5m2!1sen!2sca',
+		facebooklink: 'https://www.facebook.com/sushiwoodnelson/',
+		instagramlink: 'https://www.instagram.com/explore/locations/1998113930484062/nelson-sushi-wood/',
 	},
 	{
 		apiAddr: 'Castlegar, BC',
@@ -31,6 +35,8 @@ const locations = [
 		email: 'sushiwoodcastlegar@gmail.com',
 		mapSrc:
 			'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5200.585604426014!2d-117.6661027!3d49.3276751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537cd3664b0c818f%3A0x14b64c279b69e510!2sSushi%20Wood%20Castlegar!5e0!3m2!1sen!2sca!4v1741678416648!5m2!1sen!2sca',
+		facebooklink: 'Coming soon',
+		instagramlink: 'Coming soon',
 	},
 ];
 
@@ -88,22 +94,22 @@ const Footer = () => {
 
 							<div>
 								<h3 className='border-b text-lg mb-1 font-normal '>Open Hours</h3>
-								<p>Mon - Thurs: 11:30am - 9:30pm</p>
-								<p>Fri: 11:30am - 10:00pm</p>
-								<p>Sat: 11:00am - 10:00pm</p>
-								<p>Sun: 11:00am - 10:00pm</p>
+								<p>Mon-Thurs: 11:30am - 10:00pm</p>
+								<p>Fri: 	  11:30am - 10:00pm</p>
+								<p>Sat: 11:30am - 10:00pm</p>
+								<p>Sun: 11:30am - 10:00pm</p>
 							</div>
 
 							<div className="flex gap-4">
 								<a
-									href="https://www.facebook.com/media/set/?set=a.750329719694381"
+									href={`${currentLocation.facebooklink}`}
 									target="_blank"
 									rel="noopener noreferrer"
 								>
 									<Facebook className="h-8 w-8 cursor-pointer" />
 								</a>
 								<a
-									href="https://www.instagram.com/ferniesushiwood/?hl=en"
+									href={`${currentLocation.instagramlink}`}
 									target="_blank"
 									rel="noopener noreferrer"
 								>

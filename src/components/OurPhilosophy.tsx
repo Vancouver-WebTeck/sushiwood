@@ -7,13 +7,13 @@ const OurPhilosophy = () => {
       <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-4 md:px-14 py-12">
         <div className="relative w-full text-center">
           <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-          <h2 className="text-2xl md:text-3xl z-10 font-semibold tracking-wider uppercase  w-40 md:w-fit md:bg-black md:px-8 mx-auto">
+          <h2 className="text-2xl md:text-3xl z-10 font-brandon-text tracking-wider uppercase  w-40 md:w-fit md:bg-black md:px-8 mx-auto">
             Who We Are
           </h2>
         </div>
 
-        <div className="flex items-center gap-10 flex-col md:flex-row">
-          <div className="flex gap-8 flex-col">
+        <div className="flex items-stretch gap-10 flex-col md:flex-row">
+          <div className="flex gap-8 flex-col h-full">
             <figure className="flex justify-center">
               <Image
                 height={100}
@@ -25,7 +25,7 @@ const OurPhilosophy = () => {
               />
             </figure>
 
-            <div className="flex flex-col gap-2 text-center">
+            <div className="flex flex-col gap-2 text-center flex-1 justify-between">
               <h3 className="text-xl uppercase">Vision</h3>
               <p>
                 Our vision is to be a culinary haven where diversity is celebrated, and culinary boundaries are pushed to new heights.
@@ -45,7 +45,7 @@ const OurPhilosophy = () => {
               />
             </figure>
 
-            <div className="flex flex-col gap-2 text-center">
+            <div className="flex flex-col gap-2 text-center flex-2 justify-between">
               <h3 className="text-xl uppercase">Mission</h3>
               <p>
                Our mission is to provide a culunary journey that delights the senses, fosters cultural appreciation, and brings people together in a spirit of warmth and hospitality.
@@ -65,7 +65,7 @@ const OurPhilosophy = () => {
               />
             </figure>
 
-            <div className="flex flex-col gap-2 text-center">
+            <div className="flex flex-col gap-2 text-center flex-3 justify-between">
               <h3 className="text-xl uppercase">Value</h3>
               <p>
                 Korean & Japanese restaurant offers a fusion of two distinct culinary traditions, providing a range of values that appeal to diverse taste.

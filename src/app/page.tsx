@@ -11,6 +11,18 @@ export default function Home() {
     <main className="flex flex-col gap-y-24">
       <Popup />
       <Hero />
+      {/* Location Selector */}
+      <section id="location">
+        <div className="flex items-center justify-center flex-col bg-white py-16">
+          <div className="relative w-full text-center">
+            <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
+            <h2 className="pb-16 text-black text-3xl z-10 font-brandon-text uppercase tracking-wide w-40 md:w-fit md:px-8 mx-auto">
+              Select Location
+            </h2>
+          </div>
+          <LocationSelector />
+        </div>
+      </section>
       <OurPhilosophy />
 
       {/* TODO fix this about shit its squeezing the page on mobile */}
@@ -80,18 +92,7 @@ export default function Home() {
       {/* Menu */}
       <Menu />
 
-      {/* Location Selector */}
-      <section id="location">
-        <div className="flex items-center justify-center flex-col bg-white py-16">
-          <div className="relative w-full text-center">
-            <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-            <h2 className="pb-16 text-black text-3xl z-10 font-brandon-text uppercase tracking-wide w-40 md:w-fit md:px-8 mx-auto">
-              Location
-            </h2>
-          </div>
-          <LocationSelector />
-        </div>
-      </section>
+      
     </main>
   );
 }

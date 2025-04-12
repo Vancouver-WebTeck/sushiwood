@@ -21,6 +21,7 @@ export default function CurrentTemperature() {
 		`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${selectedLocation}`,
 		fetcher
 	);
+	console.log(data);
 	// const currentWeather = location.map((loc) => {
 	// 	const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${selectedLocation}`;
 	// 	return useSWR<CurrentTemperatureProps>(url, fetcher);

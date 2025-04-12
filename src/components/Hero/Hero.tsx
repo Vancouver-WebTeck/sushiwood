@@ -9,11 +9,11 @@ export default function Hero() {
   return (
     <section id="home">
       <MaxWidthContent className="mt-8 flex flex-col gap-y-12 pl-14 ">
-        <h1 className="text-4xl flex flex-col tracking-widest absolute top-48 z-20 ">
-          <span className="uppercase tracking-tight inline-block font-medium text-4xl">
+        <h1 className="text-5xl flex flex-col tracking-widest absolute top-48 z-20 ">
+          <span className="uppercase tracking-tight inline-block font-medium text-5xl">
             Sushiwood
           </span>
-          <div className="w-80 h-0.5 my-0.5" />
+          <div className="w-80 h-0.5 my-2" />
           <span className="text-3xl tracking-tighter self-end">
             Korean & Japanese Restaurant
           </span>
@@ -36,7 +36,7 @@ export default function Hero() {
       </MaxWidthContent>
 
       <figure className="w-full relative -mt-12 -z-20 ">
-        <div className="fixed inset-0 opacity-45 bg-black"></div>
+        {/* <div className="fixed inset-0 opacity-45 bg-black"></div> */}
         <Image
           height={500}
           width={2000}
