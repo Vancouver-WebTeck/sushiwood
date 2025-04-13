@@ -26,7 +26,7 @@ const Reservation = () => {
             aria-label="Call Us"
             target="_blank"
           >
-            Fernie - Order now
+            Fernie - Order for pickup
           </a>
         </Button>
         <Button variant={"goldenborder"}>
