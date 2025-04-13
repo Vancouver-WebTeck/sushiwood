@@ -1,6 +1,6 @@
 'use client';
 import useSWR from 'swr';
-import { useLocation } from '@/contexts/LocationContext';
+import { usePathname } from 'next/navigation'
 
 interface CurrentTemperatureProps {
 	current: {
@@ -15,13 +15,13 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function CurrentTemperature() {
 	const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
-	const { selectedLocation } = useLocation();
+	const pathname = usePathname()
+	const selectedLocation = pathname === "/" ? "fernie" : pathname.slice(1)
 
 	const { data, error } = useSWR<CurrentTemperatureProps>(
 		`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${selectedLocation}`,
 		fetcher
 	);
-	console.log(data);
 	// const currentWeather = location.map((loc) => {
 	// 	const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${selectedLocation}`;
 	// 	return useSWR<CurrentTemperatureProps>(url, fetcher);
