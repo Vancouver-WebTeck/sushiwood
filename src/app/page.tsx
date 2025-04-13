@@ -26,7 +26,7 @@ export default function Home() {
       <OurPhilosophy />
 
       {/* TODO she writing her content here, so she wanted to comment it out for now */}
-      {/* <section id="about" className="bg-white">
+      <section id="about" className="bg-white">
         <div className="none grid md:grid-cols-2">
           <figure className="h-full">
             <Image
@@ -85,7 +85,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       <RestaurantPhoto />
 

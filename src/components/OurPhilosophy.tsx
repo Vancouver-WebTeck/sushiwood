@@ -48,7 +48,7 @@ const OurPhilosophy = () => {
             <div className="flex flex-col gap-2 text-center flex-2 justify-between">
               <h3 className="text-xl uppercase">Mission</h3>
               <p>
-               Our mission is to provide a culunary journey that delights the senses, fosters cultural appreciation, and brings people together in a spirit of warmth and hospitality.
+               Our mission is to provide a culinary journey that delights the senses, fosters cultural appreciation, and brings people together in a spirit of warmth and hospitality.
               </p>
             </div>
           </div>

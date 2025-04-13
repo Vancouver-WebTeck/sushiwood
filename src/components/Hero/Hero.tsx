@@ -9,30 +9,34 @@ export default function Hero() {
   return (
     <section id="home">
       <MaxWidthContent className="mt-8 flex flex-col gap-y-12 pl-14 ">
-        <h1 className="text-5xl flex flex-col tracking-widest absolute top-48 z-20 ">
-          <span className="uppercase tracking-tight font-medium text-4xl md:text-5xl">
-            Sushiwood
-          </span>
-          <div className="w-80 h-0.5 my-2" />
-          <span className="text-2xl md:text-3xl tracking-tighter self-end">
-            Korean & Japanese Restaurant
-          </span>
-        </h1>
+      <h1 className="text-5xl flex flex-col tracking-widest absolute top-48 z-20 max-w-[90%] sm:max-w-none">
+        <span className="uppercase tracking-tight font-medium text-4xl md:text-5xl">
+          Sushiwood
+        </span>
+        <div className="w-40 md:w-80 h-0.5 my-2" />
+        <span className="text-2xl md:text-3xl tracking-tighter text-left self-start leading-tight">
+          <span className="block sm:inline">Korean & Japanese</span>
+          <span className="block sm:inline"> Restaurant</span>
+        </span>
+      </h1>
 
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex justify-center gap-4 md:hidden w-full px-4">
         <Button
-          className="w-fit z-20 absolute bottom-10 left-1/3 -translate-x-1/2 md:hidden font-semibold text-base"
+          className="w-fit font-semibold text-base"
           variant={"destructive"}
           onClick={() => toggle("reservation")}
         >
           Reservations
         </Button>
         <Button
-          className="w-fit z-20 absolute bottom-10 left-2/3 -translate-x-1/2 md:hidden font-semibold text-black text-base"
+          className="w-fit font-semibold text-base text-black"
           variant={"outline"}
           onClick={() => toggle("order")}
         >
           Order Now
         </Button>
+      </div>
+
       </MaxWidthContent>
 
       <figure className="w-full relative -mt-12 -z-20 ">
