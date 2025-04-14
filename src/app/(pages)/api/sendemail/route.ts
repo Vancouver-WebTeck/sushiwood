@@ -25,7 +25,7 @@ export async function POST(req: Request) {
       html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px; border: 1px solid #ddd; border-radius: 8px; max-width: 600px; margin: auto;">
         <h2 style="color: #2c3e50;">Reservation Confirmation</h2>
-        <p>Dear owner,</p>
+        <p>Sushiwood,</p>
         <p>You got a reservation for ${name}. Here are the details of the reservation:</p>
 
         <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">

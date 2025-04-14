@@ -25,7 +25,7 @@ export default function LocationSelector() {
     },
     {
       apiAddr: "Castlegar, BC",
-      name: "Sushiwood - Castegar",
+      name: "Sushiwood - Castlegar",
       address: "Columbia Ave, Castlegar, BC V1N 1A9",
       image: "/sushiwood/sushiwood-castlegar.webp",
       slug: "/castlegar",

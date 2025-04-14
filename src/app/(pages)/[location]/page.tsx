@@ -1,21 +1,122 @@
+import type { Metadata } from "next";
+import Head from "next/head";
 import Menu from "@/_component/Menu";
 import Popup from "@/_component/Popup";
 import { LocationSelector, OurPhilosophy, RestaurantPhoto } from "@/components";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
 
+// Dynamic location data
+const locationData = {
+  fernie: {
+    name: "SushiWood Fernie",
+    title: "SushiWood Fernie | Japanese & Korean Fusion",
+    description: "Experience Japanese and Korean flavors in Fernie, BC. Fresh sushi, warm hospitality, and cozy dine-in or takeout.",
+    url: "https://sushiwood.ca/fernie",
+    image: "https://sushiwood.ca/og-image.jpg",
+    address: {
+      street: "1221 7th Ave",
+      city: "Fernie",
+      region: "BC",
+      postalCode: "V0B 1M0",
+      country: "CA",
+    },
+    phone: "+1-(778)-519-5255",
+  },
+  nelson: {
+    name: "SushiWood Nelson",
+    title: "SushiWood Nelson | Korean & Japanese Fusion",
+    description: "Discover SushiWood Nelson, your go-to spot for fresh sushi and Korean classics in Nelson, BC.",
+    url: "https://sushiwood.ca/nelson",
+    image: "https://sushiwood.ca/og-image.jpg",
+    address: {
+      street: "702 Vernon St",
+      city: "Nelson",
+      region: "BC",
+      postalCode: "V1L 4G2",
+      country: "CA",
+    },
+    phone: "+1-(778)-463-1117",
+  },
+  castlegar: {
+    name: "SushiWood Castlegar",
+    title: "SushiWood Castlegar | Korean & Japanese Fusion",
+    description: "Try SushiWood Castlegar for the best Japanese and Korean dishes in Castlegar, BC. Dine-in and takeout available.",
+    url: "https://sushiwood.ca/castlegar",
+    image: "https://sushiwood.ca/og-image.jpg",
+    address: {
+      street: "789 Columbia Ave",
+      city: "Castlegar",
+      region: "BC",
+      postalCode: "V1N 1H0",
+      country: "CA",
+    },
+    phone: "+1-250-000-3333",
+  },
+};
+
+// Dynamic Meta Tags
+export async function generateMetadata({
+  params,
+}: {
+  params: { location: "fernie" | "nelson" | "castlegar" };
+}): Promise<Metadata> {
+  const data = locationData[params.location];
+
+  return {
+    title: data.title,
+    description: data.description,
+    twitter: {
+      card: "summary_large_image",
+      title: data.title,
+      description: data.description,
+      images: [data.image],
+    },
+  };
+}
+
+// Page Component
 export default async function Page({
   params,
 }: {
-  params: Promise<{ location: "fernie" | "nelson" | "castlegar" }>;
+  params: { location: "fernie" | "nelson" | "castlegar" };
 }) {
-  const { location } = await params;
+  const location = params.location;
+  const data = locationData[location];
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    name: data.name,
+    image: data.image,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: data.address.street,
+      addressLocality: data.address.city,
+      addressRegion: data.address.region,
+      postalCode: data.address.postalCode,
+      addressCountry: data.address.country,
+    },
+    telephone: data.phone,
+    url: data.url,
+    servesCuisine: ["Japanese", "Korean"],
+    priceRange: "$$",
+  };
+
   return (
     <>
+      {/* Local Business Schema */}
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      </Head>
+
       <main className="flex flex-col gap-y-24">
         <Popup />
         <Hero />
-        {/* Location Selector */}
+
         <section id="location">
           <div className="flex items-center justify-center flex-col bg-white py-16">
             <div className="relative w-full text-center">
@@ -27,8 +128,8 @@ export default async function Page({
             <LocationSelector />
           </div>
         </section>
-        <OurPhilosophy />
 
+        <OurPhilosophy />
         {/* TODO she writing her content here, so she wanted to comment it out for now */}
         {/* <section id="about" className="bg-white">
         <div className="none grid md:grid-cols-2">
@@ -93,6 +194,7 @@ export default async function Page({
         <RestaurantPhoto />
         <Menu location={location} />
       </main>
+
       <Footer location={location} />
     </>
   );
