@@ -50,7 +50,8 @@ export default function LocationSelector() {
               <Image
                 src={loc.image}
                 alt={loc.name}
-                fill
+                width={320}
+  				height={224}
                 sizes="(min-width: 768px) 320px, 100vw"
                 className="object-cover rounded"
                 priority // optional, improves LCP if above the fold

@@ -39,20 +39,21 @@ export default function Hero() {
 
       </MaxWidthContent>
 
-      <figure className="w-full relative -mt-12 -z-20 ">
+      <figure className="w-full relative aspect-[2/1] sm:aspect-[3/1] md:aspect-auto -mt-12 -z-20">
         {/* <div className="fixed inset-0 opacity-45 bg-black"></div> */}
         <Image
           height={500}
           width={2000}
-          src="/sushiwood/hero-img.webp"
+          src="/sushiwood/hero-img2.webp"
           alt="long line of sushi"
           loading="eager"
-          sizes="(max-width: 675px) 675px, (max-width: 1350px) 1350px, 2700px"
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 1600px"
+
           priority={true}
           style={{
             objectFit: "cover",
           }}
-          className="w-full h-[900px] md:h-screen"
+          className="w-full h-[700px] sm:h-[600px] md:h-screen"
         />
       </figure>
     </section>
