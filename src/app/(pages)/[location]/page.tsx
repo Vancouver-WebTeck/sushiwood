@@ -5,6 +5,7 @@ import Popup from "@/_component/Popup";
 import { LocationSelector, OurPhilosophy, RestaurantPhoto } from "@/components";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
+import { notFound } from "next/navigation";
 
 // Dynamic location data
 const locationData = {
@@ -62,7 +63,8 @@ export async function generateMetadata({
   params: { location: "fernie" | "nelson" | "castlegar" };
 }): Promise<Metadata> {
   const data = locationData[params.location];
-
+  if (!data) return notFound();
+  
   return {
     title: data.title,
     description: data.description,
@@ -83,6 +85,7 @@ export default async function Page({
 }) {
   const location = params.location;
   const data = locationData[location];
+  if (!data) return notFound();
 
   const schema = {
     "@context": "https://schema.org",
@@ -101,6 +104,7 @@ export default async function Page({
     url: data.url,
     servesCuisine: ["Japanese", "Korean"],
     priceRange: "$$",
+    cuisineType: ["Japanese", "Korean"],
   };
 
   return (

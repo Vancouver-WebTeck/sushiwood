@@ -21,6 +21,13 @@ export default function Hero() {
       </h1>
 
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex justify-center gap-4 md:hidden w-full px-4">
+      <Button
+          className="w-fit font-semibold text-base text-black"
+          variant={"outline"}
+          onClick={() => toggle("order")}
+        >
+          Order Now
+        </Button>
         <Button
           className="w-fit font-semibold text-base"
           variant={"destructive"}
@@ -28,13 +35,7 @@ export default function Hero() {
         >
           Reservations
         </Button>
-        <Button
-          className="w-fit font-semibold text-base text-black"
-          variant={"outline"}
-          onClick={() => toggle("order")}
-        >
-          Order Now
-        </Button>
+        
       </div>
 
       </MaxWidthContent>
