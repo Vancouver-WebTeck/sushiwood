@@ -25,14 +25,14 @@ export default function Home() {
         <OurPhilosophy />
 
         {/* TODO she writing her content here, so she wanted to comment it out for now */}
-        <section id="about" className="bg-white">
+        {/* <section id="about" className="bg-white">
         <div className="none grid md:grid-cols-2">
           <figure className="h-full">
             <Image
               height={3200}
               width={4800}
-              src={"/sushiwood/about-us.webp"}
-              alt="Chef looking at the sushi closely in their hand"
+              src={"/sushiwood/about-us-1.webp"}
+              alt="Sushi plated on a table"
               sizes="100vw"
               className="object-cover md:w-full md:h-full mx-auto"
             />
@@ -69,7 +69,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
         <RestaurantPhoto />
         <Menu location="fernie" />
       </main>

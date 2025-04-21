@@ -41,7 +41,7 @@ export default function Hero() {
       </MaxWidthContent>
 
       <figure className="w-full relative aspect-[2/1] sm:aspect-[3/1] md:aspect-auto -mt-12 -z-20">
-        <div className="fixed inset-0 opacity-45 bg-black"></div>
+        {/* <div className="fixed inset-0 opacity-45 bg-black"></div> */}
         <Image
           height={500}
           width={2000}
