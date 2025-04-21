@@ -55,6 +55,8 @@ export default function Hero() {
             objectFit: "cover",
           }}
           className="w-full h-[100vh] sm:h-[600px] md:h-screen"
+          placeholder="blur"
+          blurDataURL="/sushiwood/hero-img2-blur.webp"
         />
       </figure>
     </section>
