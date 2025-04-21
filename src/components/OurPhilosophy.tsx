@@ -4,7 +4,7 @@ import MaxWidthContent from "@/_component/MaxWidthContent";
 const OurPhilosophy = () => {
   return (
     <section id="ingredients">
-      <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-4 md:px-14 py-12">
+      <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-4 md:px-14 py-20">
         <div className="relative w-full text-center">
           <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
           <h2 className="text-2xl md:text-3xl z-10 font-brandon-text tracking-wider uppercase  w-40 md:w-fit md:bg-black md:px-8 mx-auto">
