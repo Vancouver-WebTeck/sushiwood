@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col gap-y-24">
+      <main className="flex flex-col">
         <Popup />
         <Hero />
         {/* Location Selector */}

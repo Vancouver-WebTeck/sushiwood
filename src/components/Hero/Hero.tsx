@@ -9,8 +9,8 @@ export default function Hero() {
   return (
     <section id="home">
       <MaxWidthContent className="mt-8 flex flex-col gap-y-12 pl-14 ">
-      <h1 className="text-5xl flex flex-col tracking-widest absolute top-48 z-20 max-w-[90%] sm:max-w-none">
-        <span className="uppercase tracking-tight font-medium text-4xl md:text-5xl">
+      <h1 className="text-5xl flex flex-col tracking-widest absolute top-[20%] z-20 max-w-[90%] sm:max-w-none">
+        <span className="uppercase tracking-tight font-medium text-4xl lg:text-6xl md:text-5xl">
           Sushiwood
         </span>
         <div className="w-40 md:w-80 h-0.5 my-2" />
@@ -20,7 +20,7 @@ export default function Hero() {
         </span>
       </h1>
 
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex justify-center gap-4 md:hidden w-full px-4">
+      <div className="absolute bottom-[20%] left-1/2 transform -translate-x-1/2 flex justify-center gap-4 md:hidden w-full px-4">
       <Button
           className="w-fit font-semibold text-base text-black"
           variant={"outline"}
@@ -41,7 +41,7 @@ export default function Hero() {
       </MaxWidthContent>
 
       <figure className="w-full relative aspect-[2/1] sm:aspect-[3/1] md:aspect-auto -mt-12 -z-20">
-        {/* <div className="fixed inset-0 opacity-45 bg-black"></div> */}
+        <div className="fixed inset-0 opacity-45 bg-black"></div>
         <Image
           height={500}
           width={2000}
@@ -54,7 +54,7 @@ export default function Hero() {
           style={{
             objectFit: "cover",
           }}
-          className="w-full h-[700px] sm:h-[600px] md:h-screen"
+          className="w-full h-[100vh] sm:h-[600px] md:h-screen"
         />
       </figure>
     </section>
