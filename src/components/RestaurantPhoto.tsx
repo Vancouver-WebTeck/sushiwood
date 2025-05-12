@@ -16,7 +16,7 @@ const photos = [
 const RestaurantPhoto = () => {
   return (
     <section id="restaurant-photo">
-      <MaxWidthContent className="px-4">
+      <MaxWidthContent className="px-4 py-20">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {photos.map((photo, index) => (
             <figure

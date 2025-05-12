@@ -62,15 +62,16 @@ const Header = () => {
 							</Link>
 						</li>
 						<li className='cursor-pointer'>
-							<Button variant={'goldenborder'} onClick={() => toggle('reservation')} className='text-xs md:text-base'>
-								RESERVATIONS
-							</Button>
-						</li>
-						<li className='cursor-pointer'>
 							<Button className='text-xs md:text-base' variant={'goldenborder'} onClick={() => toggle('order')}>
 								ORDER NOW
 							</Button>
 						</li>
+						<li className='cursor-pointer'>
+							<Button variant={'goldenborder'} onClick={() => toggle('reservation')} className='text-xs md:text-base'>
+								RESERVATIONS
+							</Button>
+						</li>
+						
 					</ul>
 				</nav>
 			</MaxWidthContent>

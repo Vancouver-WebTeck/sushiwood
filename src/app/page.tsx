@@ -3,11 +3,11 @@ import Popup from "@/_component/Popup";
 import { LocationSelector, OurPhilosophy, RestaurantPhoto } from "@/components";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
-
+import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col gap-y-24">
+      <main className="flex flex-col">
         <Popup />
         <Hero />
         {/* Location Selector */}
@@ -31,8 +31,8 @@ export default function Home() {
             <Image
               height={3200}
               width={4800}
-              src={"/sushiwood/about-us.webp"}
-              alt="Chef looking at the sushi closely in their hand"
+              src={"/sushiwood/about-us-1.webp"}
+              alt="Sushi plated on a table"
               sizes="100vw"
               className="object-cover md:w-full md:h-full mx-auto"
             />
@@ -43,28 +43,13 @@ export default function Home() {
               Experience Japanese & Korean Flavors in Fernie, BC
             </h2>
             <p>
-              Welcome to SushiWood Fernie, the newest restaurant in Fernie
-              offering the best of Japanese and Korean cuisine. Located in the
-              heart of Fernie, we bring you fresh ingredients, fusion of
-              flavors, and modern culinary techniques to deliver a dining
-              experience that’s both delicious and affordable. Whether
-              you&apos;re looking for sushi in Fernie or other classic Fernie
-              sushi options, we have something to satisfy every craving.
+              What began as a small, cozy spot called Japanese Korean Barbecue has grown into one of Fernie’s favorite fusion dining experiences. Now known as SushiWood, the restaurant serves a mouthwatering blend of traditional Japanese and Korean dishes — from sizzling fried rice to fresh sushi — all made with passion and love.
             </p>
             <p>
-              At SushiWood Fernie, we pride ourselves on serving a wide variety
-              of sushi, sashimi, and classic Japanese and Korean dishes, all
-              crafted by our skilled chefs with the utmost care. Whether
-              you&apos;re here for a quick and convenient takeout meal or a cozy
-              dine-in experience, every dish is made with the highest quality
-              ingredients.
+              Located on 7th Avenue in Fernie, SushiWood is proudly owned and operated by Oyunaa, who first started working at the restaurant in 2018. After years of dedication and hands-on experience, she took over ownership in 2022. During this time, she also completed training at the Japanese Culinary Institute, bringing even more depth and expertise to the kitchen.
             </p>
             <p>
-              As a proud member of the Fernie restaurant community, we are
-              committed to offering a welcoming atmosphere where both locals and
-              visitors can enjoy fresh, vibrant flavors and friendly service.
-              Come visit us and taste the sushi in Fernie—a local
-              favorite for all your Japanese and Korean cravings!
+              Since then, SushiWood has expanded with additional locations in Cranbrook and Nelson. While these branches share the same brand and concept, each location is independently operated.
             </p>
             <div className="flex flex-row-reverse gap-4">
               <Image

@@ -5,6 +5,7 @@ import Popup from "@/_component/Popup";
 import { LocationSelector, OurPhilosophy, RestaurantPhoto } from "@/components";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
+import { notFound } from "next/navigation";
 
 // Dynamic location data
 const locationData = {
@@ -12,6 +13,7 @@ const locationData = {
     name: "SushiWood Fernie",
     title: "SushiWood Fernie | Japanese & Korean Fusion",
     description: "Experience Japanese and Korean flavors in Fernie, BC. Fresh sushi, warm hospitality, and cozy dine-in or takeout.",
+    keywords: "Sushi, Japanese food, Korean food, Fernie sushi, Fernie Japanese restaurant, Fernie Korean cuisine, takeout sushi Fernie, dine-in sushi Fernie",
     url: "https://sushiwood.ca/fernie",
     image: "https://sushiwood.ca/og-image.jpg",
     address: {
@@ -27,6 +29,7 @@ const locationData = {
     name: "SushiWood Nelson",
     title: "SushiWood Nelson | Korean & Japanese Fusion",
     description: "Discover SushiWood Nelson, your go-to spot for fresh sushi and Korean classics in Nelson, BC.",
+    keywords: "Sushi, Japanese food, Korean food, Nelson sushi, Nelson Japanese restaurant, Nelson Korean cuisine, takeout sushi Nelson, dine-in sushi Nelson",
     url: "https://sushiwood.ca/nelson",
     image: "https://sushiwood.ca/og-image.jpg",
     address: {
@@ -62,7 +65,8 @@ export async function generateMetadata({
   params: { location: "fernie" | "nelson" | "castlegar" };
 }): Promise<Metadata> {
   const data = locationData[params.location];
-
+  if (!data) return notFound();
+  
   return {
     title: data.title,
     description: data.description,
@@ -83,6 +87,7 @@ export default async function Page({
 }) {
   const location = params.location;
   const data = locationData[location];
+  if (!data) return notFound();
 
   const schema = {
     "@context": "https://schema.org",
@@ -101,6 +106,7 @@ export default async function Page({
     url: data.url,
     servesCuisine: ["Japanese", "Korean"],
     priceRange: "$$",
+    cuisineType: ["Japanese", "Korean"],
   };
 
   return (
