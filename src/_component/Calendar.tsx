@@ -100,22 +100,33 @@ const Calendar = ({ classname }: { classname?: string }) => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    try {
-      const response = await fetch("/api/sendemail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
 
-      if (response.ok) {
-        alert("Reservation confirmed!! See you soon.");
-        form.reset();
-      } else {
-        alert("Failed to reserve. Please try again!!");
+    const { dor } = values;
+
+    if (
+      dor.getFullYear() == 2025 &&
+      dor.getMonth() + 1 == 4 &&
+      dor.getDate() == 11
+    ) {
+      alert("Everything's packed today sorry");
+    } else {
+      try {
+        const response = await fetch("/api/sendemail", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(values),
+        });
+
+        if (response.ok) {
+          alert("Reservation confirmed!! See you soon.");
+          form.reset();
+        } else {
+          alert("Failed to reserve. Please try again!!");
+        }
+      } catch (error) {
+        console.error("Error sending message:", error);
+        alert("An error occurred. Please try again.");
       }
-    } catch (error) {
-      console.error("Error sending message:", error);
-      alert("An error occurred. Please try again.");
     }
   };
 
