@@ -82,13 +82,14 @@ const formSchema = z.object({
 
 const Calendar = ({ classname }: { classname?: string }) => {
   const { toggle } = usePopupStore();
-
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      dor: new Date(),
+      dor: tomorrow,
       time: "12:00 PM",
       numberOfPeople: 1,
       phoneNumber: "",
@@ -204,7 +205,7 @@ const Calendar = ({ classname }: { classname?: string }) => {
                       mode="single"
                       selected={field.value}
                       onSelect={field.onChange}
-                      fromDate={new Date()}
+                      fromDate={tomorrow}
                       initialFocus
                     />
                   </PopoverContent>
