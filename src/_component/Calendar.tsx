@@ -61,7 +61,7 @@ const canadianPhoneNumberRegex =
 const formSchema = z.object({
   name: z.string({ required_error: "Name is required" }).min(2),
   dor: z.date({
-    required_error: "A date of birth is required.",
+    required_error: "A date of reservation is required.",
   }),
   time: z.string({
     required_error: "Please select the timezone to book.",
@@ -83,7 +83,7 @@ const formSchema = z.object({
 const Calendar = ({ classname }: { classname?: string }) => {
   const { toggle } = usePopupStore();
   const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 1);
+  tomorrow.setDate(tomorrow.getDate() + 2);
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -207,6 +207,7 @@ const Calendar = ({ classname }: { classname?: string }) => {
                       onSelect={field.onChange}
                       fromDate={tomorrow}
                       initialFocus
+                      disabled={[new Date(2025, 8, 3)]}
                     />
                   </PopoverContent>
                 </Popover>
