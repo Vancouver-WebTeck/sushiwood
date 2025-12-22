@@ -54,15 +54,37 @@ const TIMES = [
   "9:00 PM",
 ];
 
+const isDisabledDate = (date: Date) => {
+  const month = date.getMonth(); // 0-based (Dec = 11)
+  const day = date.getDate();
+
+  // December 22 or December 25
+  return month === 11 && (day === 22 || day === 25);
+};
+
 // Canadian phone number regex
 const canadianPhoneNumberRegex =
   /^(\+?1\s?)?(\(?\d{3}\)?[\s.-]?)?\d{3}[\s.-]?\d{4}$/;
 
 const formSchema = z.object({
   name: z.string({ required_error: "Name is required" }).min(2),
-  dor: z.date({
-    required_error: "A date of reservation is required.",
-  }),
+
+  dor: z
+    .date({
+      required_error: "A date of reservation is required.",
+    })
+    .refine(
+      (date) => {
+        const month = date.getMonth();
+        const day = date.getDate();
+
+        // Block December 22 & 25
+        return !(month === 11 && (day === 22 || day === 25));
+      },
+      {
+        message: "Reservations are not available on December 22 or 25.",
+      }
+    ),
   time: z.string({
     required_error: "Please select the timezone to book.",
   }),
@@ -207,6 +229,7 @@ const Calendar = ({ classname }: { classname?: string }) => {
                       onSelect={field.onChange}
                       fromDate={tomorrow}
                       initialFocus
+                      disabled={isDisabledDate}
                     />
                   </PopoverContent>
                 </Popover>
