@@ -92,7 +92,10 @@ const formSchema = z.object({
     .number({
       required_error: "Please enter the number of people",
     })
-    .min(1),
+    .min(6, {
+      message:
+        "We are currently only taking reservation for groups of 6 or more",
+    }),
   phoneNumber: z
     .string({ required_error: "Phone number is required" })
     .refine(
