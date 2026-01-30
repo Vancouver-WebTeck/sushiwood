@@ -33,17 +33,15 @@ const Menu = ({
     menuImageArr = ["/sushiwood/castlegar-menu/comming-soon.jpg"];
   } else {
     menuImageArr = [
-      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-1.webp",
-      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-2.webp",
-      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-3.webp",
-      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-4.webp",
-      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-5.webp",
-      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-6.webp",
-      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-7.webp",
-      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-8.webp",
-      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-9.webp",
-      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-10.webp",
-      "/sushiwood/fernie-menu/food-menu/Final-Main-Menu-Design-5-images-11.webp",
+      "/sushiwood/fernie-menu/food-menu/menu-0.webp",
+      "/sushiwood/fernie-menu/food-menu/menu-1.webp",
+      "/sushiwood/fernie-menu/food-menu/menu-2.webp",
+      "/sushiwood/fernie-menu/food-menu/menu-3.webp",
+      "/sushiwood/fernie-menu/food-menu/menu-4.webp",
+      "/sushiwood/fernie-menu/food-menu/menu-5.webp",
+      "/sushiwood/fernie-menu/food-menu/menu-6.webp",
+      "/sushiwood/fernie-menu/food-menu/menu-7.webp",
+      "/sushiwood/fernie-menu/food-menu/menu-8.webp",
     ];
   }
 
