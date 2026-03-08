@@ -336,6 +336,8 @@ const Calendar = ({ classname }: { classname?: string }) => {
             )}
           />
 
+          <p className="italic text-gray-400">Reservations will be cancelled for no-shows exceeding 20 minutes past the scheduled time.</p>
+
           <div className="flex flex-col gap-2">
             <Button variant={"default"} type="submit">
               Book Now
